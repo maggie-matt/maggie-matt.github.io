@@ -63,7 +63,7 @@
         <div class="container is-max-desktop">
           <div class="columns is-centered">
             <div class="column has-text-centered">
-              <h1 class="title is-1 publication-title"><img src="dist/maggie.png" id="maggie-icon"/><span class="maggie">MaGGIe</span>: <span class="maggie">Ma</span>sk <span class="maggie">G</span>uided <span class="maggie">G</span>radual Human <span class="maggie">I</span>nstanc<span class="maggie">e</span> Matting</h1>
+              <h1 class="title is-1 publication-title"><img src="images/maggie.png" id="maggie-icon"/><span class="maggie">MaGGIe</span>: <span class="maggie">Ma</span>sk <span class="maggie">G</span>uided <span class="maggie">G</span>radual Human <span class="maggie">I</span>nstanc<span class="maggie">e</span> Matting</h1>
               <div class="is-size-3" id="conference">CVPR 2024</div>
               <br/>
               <div class="is-size-4 publication-authors">
@@ -165,7 +165,7 @@
                   We design an efficient framework that leverages <span class="highlight">Transformer attention</span> and <span class="highlight">Sparse convolution</span> to progressively predict human instance mattes from binary masks:
                 </p>
               </div>
-              <img id="overall" src="dist/overall_a.png" style="width: 100%"/>
+              <img id="overall" src="images/overall_a.png" style="width: 100%"/>
               <div class="columns is-centered inside">
                 <div class="column">
                   <a class="button is-normal is-light modal-button js-modal-trigger" data-target="module-inst-matte-dec">Instance Matte Decoder</a>
@@ -191,7 +191,7 @@
       <div class="modal-background"></div>
       <div class="modal-content">
         <p class="image">
-          <img src="dist/instance_guidance.png" alt="">
+          <img src="images/instance_guidance.png" alt="">
         </p>
       </div>
       <button class="modal-close is-large" aria-label="close"></button>
@@ -201,7 +201,7 @@
       <div class="modal-background"></div>
       <div class="modal-content">
         <p class="image">
-          <img src="dist/inst_matte_dec.png" alt="">
+          <img src="images/inst_matte_dec.png" alt="">
         </p>
       </div>
       <button class="modal-close is-large" aria-label="close"></button>
@@ -211,7 +211,7 @@
       <div class="modal-background"></div>
       <div class="modal-content">
         <p class="image">
-          <img src="dist/detail_aggre.png" alt="">
+          <img src="images/detail_aggre.png" alt="">
         </p>
       </div>
       <button class="modal-close is-large" aria-label="close"></button>
@@ -221,7 +221,7 @@
       <div class="modal-background"></div>
       <div class="modal-content">
         <p class="image">
-          <img src="dist/inst_spec.png" alt="">
+          <img src="images/inst_spec.png" alt="">
         </p>
       </div>
       <button class="modal-close is-large" aria-label="close"></button>
@@ -234,10 +234,69 @@
             <div class="column ">
               <h2 class="title is-3 has-text-centered"><span class="maggie">MaGGIe</span> Human Instance Matting Dataset</h2>
               <div class="columns">
-                <h3 class="title is-4 sub-dataset">I-HIM50K</h3>
+                <div class="column">
+                  <h3 class="title is-4 sub-dataset">I-HIM50K</h3>
+                  <div class="content has-text-justified">
+                    <p>
+                      We synthesized the human image instance matting dataset from <a href="https://github.com/nowsyn/sparsemat" target="_blank">HHM50K</a> as foreground and <a href="https://github.com/JizhiziLi/GFM" target="_blank">BG20K</a> as background.
+                    </p>
+                  </div>
+                  <div class="container" id="glide-container">
+                    <div class="glide" id="teaser-glide">
+                      <div data-glide-el="track" class="glide__track">
+                        <ul class="glide__slides">
+                          <li class="glide__slide">
+                            <img src="images/him50k_1.png">
+                          </li>
+                          <li class="glide__slide">
+                            <img src="images/him50k_2.png">
+                          </li>
+                          <li class="glide__slide">
+                            <img src="images/him50k_3.png">
+                          </li>
+                          <li class="glide__slide">
+                            <img src="images/him50k_4.png">
+                          </li>
+                        </ul>
+                      </div>
+          
+                      <div class="glide__arrows" data-glide-el="controls">
+                        <span class="glide__arrow glide__arrow--left" data-glide-dir="<"><img src="dist/arrow-left-circle-fill.svg"/></span>
+                        <span class="glide__arrow glide__arrow--right" data-glide-dir=">"><img src="dist/arrow-right-circle-fill.svg"/></span>
+                      </div>
+                      <div class="glide__bullets" data-glide-el="controls[nav]">
+                        <span class="glide__bullet" data-glide-dir="=0"></span>
+                        <span class="glide__bullet" data-glide-dir="=1"></span>
+                        <span class="glide__bullet" data-glide-dir="=2"></span>
+                        <span class="glide__bullet" data-glide-dir="=3"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="columns">
-                <h3 class="title is-4 sub-dataset">M-HIM2K</h3>
+                <div class="column">
+                  <h3 class="title is-4 sub-dataset">M-HIM2K</h3>
+                  <div class="content has-text-justified">
+                    <p>
+                      We generate different masks from <a href="https://github.com/facebookresearch/detectron2/blob/main/MODEL_ZOO.md#coco-instance-segmentation-baselines-with-mask-r-cnn" target="_blank">COCO-pretrained Mask-RCNN</a> to benchmark the robustness of the models.
+                    </p>
+                  </div>
+                  <div class="columns is-gapless">
+                    <div class="column">
+                      <img src="images/m_him2k_1.png"/>
+                    </div>
+                    <div class="column">
+                      <img src="images/m_him2k_2.png"/>
+                    </div>
+                    <div class="column">
+                      <img src="images/m_him2k_3.png"/>
+                    </div>
+                    <div class="column">
+                      <img src="images/m_him2k_4.png"/>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="columns">
                 <div class="column">
@@ -398,5 +457,14 @@
     <script>
       Cocoen.parse(document.body);
     </script>
+    <script>
+      glide = new Glide('.glide', {
+        type: "carousel",
+        perView: 1.27,
+        focusAt: "center",
+        autoplay: 2000,
+        hoverpause: true
+      }).mount();
+  </script>
   </body>
 </html>
