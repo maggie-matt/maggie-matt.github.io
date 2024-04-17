@@ -71,7 +71,7 @@ function showSelected() {
     for(var i = 0; i < comp_method_btns.length; i++) {
         set_inactive(comp_method_btns[i]);
     }
-    selected_index = ['input', 'instmatt', 'sparsemat_hr', 'gm_single_tcvom', 'mgm_stacked_tcvom'].indexOf(selected_compare_method);
+    selected_index = ['input', 'instmatt', 'sparsemat_hr', 'mgm_single_tcvom', 'mgm_stacked_tcvom'].indexOf(selected_compare_method);
     set_active(comp_method_btns[selected_index]);
 }
 
