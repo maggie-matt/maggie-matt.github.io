@@ -96,10 +96,10 @@ function selectComparedMethod(method) {
 
 let method_full_names = {
     'input': 'Input',
-    'instmatt': 'InstMatt (Sun et al., CVPR 2022)',
-    'sparsemat_hr': 'SparseMat (Sun et al., CVPR 2023)',
-    'mgm_single_tcvom': 'MGM (Yu et al., CVPR 2021)</br>+ TCVOM (Zhang et al., MM 2021)',
-    'mgm_stacked_tcvom': 'MGM* (with stacked masks) </br>+ TCVOM (Zhang et al., MM 2021)',
+    'instmatt': '<a href=\"https://github.com/nowsyn/InstMatt\" target=\"_blank\">InstMatt</a> (Sun et al., CVPR 2022)',
+    'sparsemat_hr': '<a href=\"https://github.com/nowsyn/SparseMat\" target=\"_blank\">SparseMat</a> (Sun et al., CVPR 2023)',
+    'mgm_single_tcvom': '<a href=\"https://github.com/yucornetto/MGMatting\" target=\"_blank\">MGM</a> (Yu et al., CVPR 2021)</br>+ <a href=\"https://github.com/yunkezhang/TCVOM\" target=\"_blank\">TCVOM</a> (Zhang et al., MM 2021)',
+    'mgm_stacked_tcvom': 'MGM* (with stacked masks) </br>+ <a href=\"https://github.com/yunkezhang/TCVOM\" target=\"_blank\">TCVOM</a> (Zhang et al., MM 2021)',
 };
 
 function update_comparison_source() {
