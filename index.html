@@ -155,6 +155,7 @@
                   Human matting is a foundation task in image and video processing where human foreground pixels are extracted from the input. Prior works either improve the accuracy by additional guidance or improve the temporal consistency of a single instance across frames. We propose a new framework <span class="maggie">MaGGIe</span>, Masked Guided Gradual Human Instance Matting, which predicts alpha mattes progressively for each human instances while maintaining the <span class="highlight">computational efficiency</span>,  <span class="highlight">output accuracy</span>, and   <span class="highlight">frame-by-frame consistency</span>. Our method leverages modern architectures, including transformer attention and sparse convolution, to output all instance mattes simultaneously without exploding memory and latency. Although keeping constant inference costs in the multiple-instance scenario, our framework achieves robust and versatile performance on our proposed synthesized benchmarks. With the higher quality image and video matting benchmarks, the novel multi-instance synthesis approach from publicly available sources is introduced to increase the generalization of mod- els in real-world scenarios.
                 </p>
               </div>
+              <img class="image" src="images/mem_speed.png"/>
             </div>
           </div>
           <div class="columns is-centered">
@@ -243,7 +244,7 @@
                     </p>
                   </div>
                   <div class="container" id="glide-container">
-                    <div class="glide" id="teaser-glide">
+                    <div class="glide" id="dataset-him50k">
                       <div data-glide-el="track" class="glide__track">
                         <ul class="glide__slides">
                           <li class="glide__slide">
@@ -521,6 +522,60 @@
         </div>
       </div>
     </section>
+    
+    <!-- For the Generalization ability -->
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h2 class="title is-3">Generalization ability</h2>
+              <div class="content has-text-justified">
+                <p>
+                  Training only on human matting datasets, our method showcases its versatility by working well on various objects.
+                </p>
+              </div>
+              <div class="container" id="glide-container">
+                <div class="glide" id="generalization">
+                  <div data-glide-el="track" class="glide__track">
+                    <ul class="glide__slides">
+                      <li class="glide__slide">
+                        <img src="images/generalization_1.png">
+                      </li>
+                      <li class="glide__slide">
+                        <img src="images/generalization_2.png">
+                      </li>
+                      <li class="glide__slide">
+                        <img src="images/generalization_3.png">
+                      </li>
+                      <li class="glide__slide">
+                        <img src="images/generalization_4.png">
+                      </li>
+                      <li class="glide__slide">
+                        <img src="images/generalization_5.png">
+                      </li>
+                    </ul>
+                  </div>
+      
+                  <div class="glide__arrows" data-glide-el="controls">
+                    <span class="glide__arrow glide__arrow--left" data-glide-dir="<"><img src="dist/arrow-left-circle-fill.svg"/></span>
+                    <span class="glide__arrow glide__arrow--right" data-glide-dir=">"><img src="dist/arrow-right-circle-fill.svg"/></span>
+                  </div>
+                  <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <span class="glide__bullet" data-glide-dir="=0"></span>
+                    <span class="glide__bullet" data-glide-dir="=1"></span>
+                    <span class="glide__bullet" data-glide-dir="=2"></span>
+                    <span class="glide__bullet" data-glide-dir="=3"></span>
+                    <span class="glide__bullet" data-glide-dir="=4"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
@@ -571,11 +626,18 @@
       Cocoen.parse(document.body);
     </script>
     <script>
-      glide = new Glide('.glide', {
+      glide = new Glide('#dataset-him50k', {
         type: "carousel",
         perView: 1.27,
         focusAt: "center",
         autoplay: 2000,
+        hoverpause: true
+      }).mount();
+      glide = new Glide('#generalization', {
+        type: "carousel",
+        perView: 1.0,
+        focusAt: "center",
+        autoplay: 5000,
         hoverpause: true
       }).mount();
   </script>
